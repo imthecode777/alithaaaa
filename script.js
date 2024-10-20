@@ -29,3 +29,9 @@ function showMessage() {
     );
   }, 150);
 }
+
+
+function startMusic() {
+  var audio = document.getElementById('background-music');
+  audio.play();
+}
