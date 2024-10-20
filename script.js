@@ -30,10 +30,12 @@ function showMessage() {
   }, 150);
 }
 
-
-function startMusic() {
+document.addEventListener('DOMContentLoaded', function() {
   var audio = document.getElementById('background-music');
-  audio.play().catch(function(error) {
-      console.log('Error playing audio:', error);
+  
+  // Unmute and play after user interaction
+  document.addEventListener('click', function() {
+      audio.muted = false; // Unmute
+      audio.play();
   });
-}
+});
