@@ -33,5 +33,7 @@ function showMessage() {
 
 function startMusic() {
   var audio = document.getElementById('background-music');
-  audio.play();
+  audio.play().catch(function(error) {
+      console.log('Error playing audio:', error);
+  });
 }
