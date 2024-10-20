@@ -21,7 +21,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   max-width: 600px;
-  width: 90%; /* More responsive width */
+  width: 90%; 
   margin: 20px;
 }
 
@@ -42,11 +42,11 @@ p {
   justify-content: space-between;
   gap: 15px;
   margin: 20px 0;
-  flex-wrap: wrap; /* Wrap images on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .container-image {
-  width: 100%; /* Let the width be fully responsive */
+  width: 100%; 
   max-width: 150px;
   border-radius: 15px;
   transition: transform 0.4s ease;
@@ -61,7 +61,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap; /* Allow hearts to wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .heart {
