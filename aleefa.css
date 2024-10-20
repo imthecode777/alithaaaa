@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffe5ec, #ff99cc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 90%; /* More responsive width */
+  margin: 20px;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #bd1656;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Wrap images on smaller screens */
+}
+
+.container-image {
+  width: 100%; /* Let the width be fully responsive */
+  max-width: 150px;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.container-image:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.heart-container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow hearts to wrap on smaller screens */
+}
+
+.heart {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: #ff69b4;
+  clip-path: polygon(50% 0%, 100% 30%, 85% 100%, 50% 75%, 15% 100%, 0% 30%);
+  animation: heartbeat 1.5s infinite, rotateHeart 5s infinite;
+}
+
+.heart:nth-child(2) {
+  animation-delay: 0.2s;
+  background-color: #ff99cc;
+}
+
+.heart:nth-child(3) {
+  animation-delay: 0.4s;
+  background-color: #ffb6c1;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes rotateHeart {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+#message {
+  font-size: 1.3rem;
+  color: #ff69b4;
+  margin-top: 25px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#message.show {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  button {
+    padding: 10px 20px;
+  }
+  .heart {
+    width: 40px;
+    height: 40px;
+  }
+  .container-image {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    padding: 8px 15px;
+  }
+  .container-image {
+    max-width: 150px;
+  }
+  .image-row {
+    justify-content: center; 
+    gap: 10px; 
+  }
+  p,
+  #message {
+    font-size: 1rem; 
+  }
+}
